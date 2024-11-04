@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'core.user',
 ]
 
-AUTH_USER_MODEL = 'core_user.User'
+AUTH_USER_MODEL = 'core_user.User'  # Ensure this matches your app and model name
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -80,15 +81,13 @@ WSGI_APPLICATION = 'CoreRoot.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'coredb',  # This should be a string
+        'NAME': 'coredb',
         'USER': 'core',
         'PASSWORD': 'wCh29&HE&T83',
         'HOST': 'localhost',
-        'PORT': '5342',
+        'PORT': '5432',
     }
 }
-
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
